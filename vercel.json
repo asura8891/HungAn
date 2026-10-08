@@ -1,14 +1,9 @@
 {
-  "rewrites": [
+  "routes": [
     {
-      "source": "/",
+      "src": "^/(?!solution/)(.*)$",
       "has": [{ "type": "host", "value": "solution.hungan.net" }],
-      "destination": "/solution/index.html"
-    },
-    {
-      "source": "/:path((?!solution/).*)",
-      "has": [{ "type": "host", "value": "solution.hungan.net" }],
-      "destination": "/solution/:path"
+      "dest": "/solution/$1"
     }
   ]
 }
